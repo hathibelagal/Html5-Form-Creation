@@ -1,0 +1,58 @@
+$borderColor: #dadada;
+$bgColor: #f1f2f3;
+$textColor: #777777;
+
+.container {
+    display:flex;
+    flex-direction:column;
+    font-family: sans-serif;
+    font-size: 14px;
+    max-width:500px;
+    min-width:300px;
+    background: $bgColor;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.45);
+    padding:20px;
+    margin: auto;
+}
+
+.full_name {
+    display:flex;
+    
+    input {
+        flex: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .full_name {
+        flex-direction: column;
+    }
+}
+
+input {
+    padding:10px;
+    border:solid 1px $borderColor;
+    margin:5px;
+    font-size:14px;
+}
+
+.birthday {
+    display:flex;
+    
+    select {
+        flex: 1;
+        margin:5px;
+    }
+    
+    span {
+        margin:5px;
+        color:$textColor;
+    }
+}
+
+input[type="submit"] {
+    margin-top:15px;
+    background:#f95a20;
+    color:white;
+    font-size:15px;    
+}

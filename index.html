@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Form</title>
+    <link rel="stylesheet" href="custom.css"/>
+</head>
+<body>
+    <form name="registration_form">
+        <div class="container">
+            <h1>Sign up</h1>
+            <div class="full_name">
+                <input type="text" name="first_name"
+                    placeholder="First name"/>
+                <input type="text" name="last_name"
+                    placeholder="Last name"/>
+            </div>
+
+            <input type="email" name="email"
+                placeholder="Email address"/>
+            <input type="password" name="password"
+                placeholder="Password"/>
+
+            <input type="tel" name="phone" placeholder="Phone number"/>
+
+            <div class="birthday">
+                <span>
+                    Birthday
+                </span>
+                <select name="month" id="month">
+                    <option disabled>Month</option>
+                </select>
+                <select name="day" id="day">
+                    <option disabled>Day</option>
+                </select>
+                <select name="year" id="year">
+                    <option disabled>Year</option>
+                </select>
+            </div>
+
+            <div class="genders">
+                <input type="radio" name="gender" value="male"
+                    id="male_gender"/>
+                <label for="male_gender">Male</label>
+
+                <input type="radio" name="gender" value="female"
+                    id="female_gender"/>
+                <label for="female_gender">Female</label>
+            </div>
+
+            <input type="submit" value="Create account"/>
+        </div>
+    </form>
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/jquery.min.js"></script>
+    <script>
+        $("document").ready(function() {
+            var months = ["January", "February", "March", "April", "May", "June", "July"
+                          , "August", "September", "October", "November", "December"];
+            for(var i=0;i<months.length;i++) {
+                $("#month").append("<option>" + months[i] + "</option>");
+            }
+            
+            for(var i=1;i<32;i++) {
+                $("#day").append("<option>" + i + "</option>");
+            }
+            
+            for(var i=2016;i>1900;i--){
+                $("#year").append("<option>" + i + "</option>");
+            }
+        });
+    </script>
+</body>
+</html>
